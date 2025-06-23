@@ -102,6 +102,20 @@
   </style>
 </head>
 <body>
+  <script>
+  window.onload = function() {
+    var password = prompt("Enter password to access this page:");
+    var correctPassword = "vikas123"; // change your password here
+
+    if (password !== correctPassword) {
+      alert("Incorrect password! Access denied.");
+      document.body.innerHTML = ""; // clears the page content
+      // Optional: Redirect to another page
+      // window.location.href = "https://www.google.com";
+    }
+  };
+</script>
+
 
   <header>
     <h1>💥Placement  Study Material Hub</h1>
