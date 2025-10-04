@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Placement & Instagram Material Hub founded by vikas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement & Instagram Material Hub</title>
   <style>
-    
-    
-    header {
-  position: relative; /* add this */
-  background: linear-gradient(135deg, hsl(221, 9%, 65%), #55036b);
-  padding: 60px 20px;
-  text-align: center;
-  color:r;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-.creator-tag {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  font-size: 0.9rem;
-  color: #ccc;
-  opacity: 0.9;
-}
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f00606, hsl(99, 94%, 44%));
-      color: #333;
       min-height: 100vh;
-      border: 4px solid blanchedalmond;
+      background: linear-gradient(270deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
-      background: linear-gradient(135deg, lch(77.36% 74.52 152.08), rgb(11, 112, 220));
-      padding: 60px 20px;
+      width: 100%;
+      max-width: 1200px;
       text-align: center;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      animation: fadeIn 1.2s ease-in-out;
-      border: 4px solid white;
+      margin-bottom: 30px;
+      animation: fadeDown 1.2s ease;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      text-shadow: 1px 2px 5px rgba(0,0,0,0.3);
-      color: w;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    header p a {
+      text-decoration: none;
+      color: #ffe600;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.4));
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .links {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
     }
 
     .links a {
       display: block;
-      padding: 15px 20px;
-      margin: 15px 0;
-      background-color: #ffffff;
-      border-radius: 10px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
       text-decoration: none;
-      color: #333;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
       transition: all 0.3s ease;
+      animation: fadeUp 1.2s ease;
     }
 
     .links a:hover {
-      background-color: #f3f7fc;
-      transform: scale(1.02);
-      color: #000;
+      transform: translateY(-5px) scale(1.02);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
     }
 
-    /* Responsive text sizing */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.8rem;
       }
-
       .links a {
-        font-size: 1rem;
-        padding: 12px 15px;
+        font-size: 0.95rem;
+        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <script>
-  window.onload = function() {
-    var password = prompt("Enter password to access this page:");
-    var correctPassword = "Python@1212"; // change your password here
-
-    if (password !== correctPassword) {
-      alert("Incorrect password! Access denied.");
-      document.body.innerHTML = ""; // clears the page content
-      // Optional: Redirect to another page
-      // window.location.href = "https://www.google.com";
-    }
-  };
-</script>
-
 
   <header>
-    <h1>💥Placement  Study Material Hub 💻</h1>
-    <p class="creator-tag"><a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/" style="color: hsl(0, 78%, 4%);"><b>▶️Developed By Vikas Kambale..!!👨‍💻</b>  </a></p>
+    <h1>💥 Placement Study Material Hub 💻</h1>
+    <p><a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/">🌐 Portfolio - Developed By Vikas Kambale 👨‍💻</a></p>
+    <div class="social-icons">
+      <a href="https://wa.me/qr/VRL2S45JZWERM1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp"></a>
+      <a href="http://www.linkedin.com/in/vikas-kambale-748874245" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/__maxx.v18?igsh=MTA2cjk5cmN0ODhneA==" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    </div>
   </header>
 
   <div class="links">
+    <!-- Your long list of links goes here (already included in your code) -->
+     
     <a href="https://drive.google.com/drive/folders/1Txer4_U8Q7NOeBCKLZyBLf5rhhwP-lt0">Top companies placement material google drive</a>
     <a href="https://www.tcsion.com/hub/national-qualifier-test/?fbclid=PAQ0xDSwK4EDVleHRuA2FlbQIxMQABp6uORfCt31pgUf47ZFeaZb_IiWLftNU3E_ZQdcwJ-c_cl3AdU98cg3NA3kwm_aem_zGu7_epWIWS71aUC8jZGzQ">TCS iON NQT
 National Qualifier Test</a>
@@ -236,10 +243,37 @@ Aap bhi chahte hain wo 25 LPA crack karne wali 150+ DSA questions ki asli PDF?</
     <a href="https://youtu.be/ndLsC-83_to?si=SuDlN0_ZX0WDUc6i">BEST PYTHON MOCK INTERVIEW</a>
     <a href="https://www.besanttechnologies.com/python-interview-questions-answers">TOP 300 + PYTHON INTERVIEW QUE</a>
     <a href="https://www.learnvern.com/course/spoken-english-course">FREE SPOKEN ENGLISH COURSE </a>
-    <a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/">To stay connected with me thank you @vikas kambale  ☺️</a>
+    
+    <a href="https://www.tcsion.com/courses/career-edge-young-professional/" >Free Certificates for Resume- TCS iON Career Edge:</a>
+    <a href="https://www.coursera.org/professional-certificates/ibm-data-science" >Free Certificates for Resume-IBM Data Science:</a>
+    <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/" >Python Free Certifications-Python for Beginners -</a>
+    <a href="https://www.codecademy.com/learn/learn-advanced-python" > Python Free Certifications-Advanced Python -</a>
+    <a href="https://www.deeplearning.ai/short-courses/ai-python-for-beginners/" >Python Free Certifications-AI Python for Beginners -</a>
+    <a href="https://www.simplilearn.com/learn-python-libraries-free-course-skillup" >Python Free Certifications-Python Libraries for Data Science -</a>
+    <a href="https://www.freecodecamp.org/learn/data-analysis-with-python/#data-analysis-with-python-course" >Python Free Certifications-Data Analysis with Python </a>
+    <a href="https://link.outskill.com/SSKM"> wants to learn AI for live? With Certificate!</a>
+    <a href="https://github.com/liquidslr/leetcode-company-wise-problems">This secret Github Repo has helped 1000+ peoples to join top companies </a>
+    <a href="https://drive.google.com/drive/folders/1eFFKoVx371-wgjc4DCQj-o301X8ZpgMA"> 10 Books Wealthy People Read That Most Middle Class People Will Never Open </a>
+    <a href="https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc"> I just found resume template with 90+ ATS score 👇Modify the template and stand out of crowd</a>
+    <a href="https://tinyurl.com/mukmnay2">Free courses by META with certificates- Front-End Development </a>
+    <a href="https://tinyurl.com/5hfv55nv">Free courses by META with certificates-Programming in Python </a>
+    <a href="https://tinyurl.com/ruxj8y2b">Free courses by META with certificates-Full-Stack Development </a>
+    <a href="https://tinyurl.com/2dyu9bze">Free courses by META with certificates- Backend Development</a>
+    <a href="https://tinyurl.com/ycy382t3">Free courses by META with certificates-  iOS Development </a>
+    <a href="http://www.rocketreach.com"> I stopped paying for LinkedIn Premium!!because I found 4 websites that give me the same features for free.- To find the mail id of the recruiter</a>
+    <a href="https://phantombuster.com/"> For automated connection request </a>
+    <a href="https://www.mindluster.com/"> 300,000 Online Courses With Free Certificates in one place </a>
+    <a href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/introduction-to-generative-ai-and-llms-generative-ai-for-beginners">Microsoft has just launched Free generative AI Course for beginners  </a>
+    <a href="http://overapi.com"> Collection of all programming languages cheat sheets</a>
+    <a href="http://roadmap.sh"> Provides roadmaps for learning technologies</a>
+    <a href="http://replit.com"> Code from anywhere</a>
+    <a href="http://resumeworded.com"> Improve your resume</a>
+    <a href="https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/"> 🚀 Free DSA course by Google</a>
+    <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/">Introduction to Python fundamentals -free courses By Microsoft </a>
+    <a href="https://drive.google.com/file/d/1u0FKZ8AoPWucO3c4lHsMcSrKrF-u2kMb/view?usp=drivesdk"> ChatGPT Prompts to optimize linkdln profile:-</a>
+    <a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/">To stay connected with me thank you @vikas kambale  ☺</a>
     
   </div>
 
 </body>
 </html>
-
