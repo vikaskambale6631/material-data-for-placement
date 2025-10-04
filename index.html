@@ -121,10 +121,23 @@
   </style>
 </head>
 <body>
+    <script>
+  window.onload = function() {
+    var password = prompt("Enter password to access this page:");
+    var correctPassword = "Python@1212"; // change your password here
+
+    if (password !== correctPassword) {
+      alert("Incorrect password! Access denied.");
+      document.body.innerHTML = ""; // clears the page content
+      // Optional: Redirect to another page
+      // window.location.href = "https://www.google.com";
+    }
+  };
+</script>
 
   <header>
     <h1>💥 Placement Study Material Hub 💻</h1>
-    <p><a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/">🌐 Portfolio - Developed By Vikas Kambale 👨‍💻</a></p>
+    <p><a href="https://vikaskambale6631.github.io/vikas-kambale-portfolio/"> Developed By Vikas Kambale -🌐 Portfolio 👈 👨‍💻</a></p>
     <div class="social-icons">
       <a href="https://wa.me/qr/VRL2S45JZWERM1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp"></a>
       <a href="http://www.linkedin.com/in/vikas-kambale-748874245" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
